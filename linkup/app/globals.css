@@ -2,7 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-
+.cl-providerIcon__github {
+  filter : invert(1)
+}
 
 @layer base {
   :root {
@@ -109,13 +111,15 @@
   }
 }
 
-
-
-@layer base {
-  * {
-    @apply border-border outline-ring/50;
-  }
-  body {
-    @apply bg-background text-foreground;
+@layer components {
+  .glassmorphism {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 10px;
   }
 }
+
+
